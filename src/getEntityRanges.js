@@ -10,7 +10,7 @@ type StyleRange = [string, Style];
 type EntityRange = [EntityKey, Array<StyleRange>];
 export type CharacterMetaList = List<CharacterMetadata>;
 
-export const EMPTY_SET = OrderedSet();
+export const EMPTY_SET: Style = new OrderedSet();
 
 export default function getEntityRanges(
   text: string,
