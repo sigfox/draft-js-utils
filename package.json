@@ -44,6 +44,24 @@
     "content-tools"
   ],
   "author": "sstur@me.com",
+  "contributors": [
+    {
+      "name": "Johannes Lumpe",
+      "url": "https://github.com/johanneslumpe"
+    },
+    {
+      "name": "Simon Sturmer",
+      "url": "https://github.com/sstur"
+    },
+    {
+      "name": "shin",
+      "url": "https://github.com/sugarshin"
+    },
+    {
+      "name": "Greg Ziegan",
+      "url": "https://github.com/thebritican"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/draft-js-utils/draft-js-utils/issues"
