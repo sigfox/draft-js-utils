@@ -1,5 +1,5 @@
 /* @flow */
-import Immutable, {OrderedSet} from 'immutable';
+import {OrderedSet, is} from 'immutable';
 
 import type {CharacterMetadata} from 'draft-js';
 import type {List} from 'immutable';
@@ -10,7 +10,7 @@ type StyleRange = [string, Style];
 type EntityRange = [EntityKey, Array<StyleRange>];
 export type CharacterMetaList = List<CharacterMetadata>;
 
-export const EMPTY_SET = OrderedSet();
+export const EMPTY_SET: Style = new OrderedSet();
 
 export default function getEntityRanges(
   text: string,
@@ -57,7 +57,7 @@ function getStyleRanges(
     prevCharStyle = charStyle;
     let meta = charMetaList.get(i);
     charStyle = meta ? meta.getStyle() : EMPTY_SET;
-    if (i > 0 && !Immutable.is(charStyle, prevCharStyle)) {
+    if (i > 0 && !is(charStyle, prevCharStyle)) {
       ranges.push([text.slice(rangeStart, i), prevCharStyle]);
       rangeStart = i;
     }
